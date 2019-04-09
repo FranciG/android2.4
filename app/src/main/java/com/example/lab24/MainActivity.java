@@ -2,7 +2,7 @@ package com.example.lab24;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+//import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +13,8 @@ Button btn1;
 EditText etexto;
 TextView texto;
 Button button2;
+Button button3;
+Button button4;
     public void supBtn_clicked(){
         String name = etexto.getText().toString();
         texto.setText( "Hola " + name);
@@ -20,6 +22,16 @@ Button button2;
     public void enBtn_clicked(){
         String name = etexto.getText().toString();
         texto.setText( "Hello " + name);
+    }
+
+    public void suomiBtn_clicked(){
+        String name = etexto.getText().toString();
+        texto.setText( "Terve " + name);
+    }
+
+    public void suecoBtn_clicked(){
+        String name = etexto.getText().toString();
+        texto.setText( "Hejjsan " + name);
     }
 
     @Override
@@ -31,6 +43,8 @@ Button button2;
        texto = findViewById(R.id.textView1);
 btn1 = findViewById(R.id.button1);
 button2 =findViewById(R.id.button2);
+button3 = findViewById(R.id.button3);
+button4 = findViewById(R.id.button4);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +60,18 @@ button2 =findViewById(R.id.button2);
             }
         });
 
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                suomiBtn_clicked();
+            }
+        });
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                suecoBtn_clicked();
+            }
+        });
 
     }
 }
